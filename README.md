@@ -1,58 +1,24 @@
-# CUCiencia · prototipo de portada
+# CUCiencia · prototipo de portada (Next.js 15 + Framer Motion)
 
-Prototipo de la portada y de la página de artículo de **CUCiencia**, el sitio de divulgación científica de la Universidad de la Costa. Sirve para validar el diseño y la comunicación antes de construir el sitio real.
+    npm install
+    npm run dev      # http://localhost:3000
+    npm run build
 
-**Demo:** _(pega aquí el enlace de Vercel)_
+Despliegue: sube la carpeta a GitHub e impórtala en Vercel (sin configuración extra; las fuentes de Google se descargan al compilar).
 
 ## Qué incluye
+- Pantalla de carga (una vez por sesión), barra de progreso, menú que se oculta al bajar, aviso de suscripción arriba.
+- Portada con video (versión clara y oscura) que arranca solo, botón de pausa, panel de vidrio y banda amarilla en movimiento.
+- Paneles apilados al hacer scroll (el de abajo sube y tapa al de arriba).
+- Destacado de la semana (1 grande + 2 pequeños) y "En foco".
+- Repositorio científico: búsqueda, filtros por área, bloques alternados (1 grande + 2 pequeños), tarjetas con inclinación 3D y resumen al pasar el cursor, datos curiosos que invitan a suscribirse, "Ver más publicaciones".
+- Subpágina del artículo (16:9): vista previa que se desvanece con botón "Seguir leyendo en [fuente]", autor (foto, nombre, ORCID, bio), fuente y DOI, citas en 6 formatos, BibTeX/RIS, banner Educosta y "Más en el repositorio".
+- Podcast con reproductor (pausar, reanudar, ±10 s, progreso, volumen), videos y "CUCiencia en los medios" (citas de ejemplo).
+- "Investigar es explorar" (letras que ondulan + video), cifras con contadores automáticos, boletín con ventana emergente.
+- Modo claro/oscuro (menú y pie) y movimiento completo por defecto; el visitante puede reducirlo en el pie ("Movimiento: reducido").
 
-- Portada con video (claro y oscuro), pantalla de carga, paneles que se apilan al hacer scroll y animaciones en todo el sitio.
-- **Destacado de la semana** y bloques de artículos (uno grande y dos pequeños), con búsqueda y filtros por área.
-- **Página de artículo** en 16:9: vista previa con enlace al original (repositorio institucional, Scopus, Web of Science, etc.), autor con ORCID, DOI y citas en 6 formatos (APA, MLA, Chicago, Vancouver, Harvard, ISO 690) con exportación BibTeX y RIS.
-- Podcast con reproductor (pausar, reanudar, ±10 s, progreso y volumen), videos y citas de prensa.
-- Ventana emergente para suscribirse al boletín.
-- Modo claro y oscuro. Movimiento completo por defecto; el visitante puede reducirlo en el pie de página.
-- Accesibilidad: foco visible, navegación con teclado, diálogos que se cierran con Esc y botón para pausar el video.
-
-## Tecnologías
-
-Next.js 15 (App Router) · React 19 · Framer Motion · CSS propio (sin librerías de UI).
-
-## Cómo correrlo
-
-Requiere Node.js 18.18 o superior.
-
-```bash
-npm install
-npm run dev     # http://localhost:3000
-npm run build   # compilar para producción
-```
-
-## Cómo publicarlo en Vercel
-
-1. Sube el proyecto a GitHub (sin `node_modules` ni `.next`).
-2. En [Vercel](https://vercel.com/): **Add New → Project**, importa el repositorio y pulsa **Deploy**. No necesita configuración extra.
-
-## Estructura
-
-```text
-app/          layout y estilos globales
-components/   secciones, lector de artículos, reproductor, datos de ejemplo
-public/       videos, audios, imágenes y logos
-```
-
-## Cómo cambiar el contenido
-
-- **Colores:** variables al inicio de `app/globals.css`.
-- **Artículos, autores, ORCID, DOI y enlaces a las bases científicas:** `components/data.js`.
-- **Videos, audios e imágenes:** `public/videos`, `public/audio` y `public/img` (se reemplazan con el mismo nombre de archivo).
-
-## Importante
-
-Es un **prototipo con contenido de ejemplo**: los textos, los 13 artículos, los autores y sus fotos, los ORCID, los DOI, las cifras, las citas de prensa y el audio del podcast son ficticios. Los enlaces a Scopus, Web of Science, ScienceDirect y Redalyc llevan a la página principal de cada plataforma.
-
-## Créditos
-
-- Diseño y desarrollo: David Mendoza (pasantía, Universidad de la Costa).
-- Videos, imágenes de tarjetas, avatares y audios: material original generado para el prototipo.
-- El nombre, el logo y la identidad visual de la Universidad de la Costa pertenecen a la institución.
+## Dónde cambiar cosas
+- Colores: variables al inicio de `app/globals.css`.
+- Artículos, autores, ORCID, DOI y enlaces a Scopus/Web of Science/etc.: `components/data.js` (hoy son de ejemplo; el banner de Educosta aún no tiene enlace).
+- Videos, audios e imágenes originales (se pueden reemplazar con el mismo nombre): `public/videos`, `public/audio`, `public/img` (ver `public/videos/LEEME.txt`).
+- Logos: `public/img/cuc-*.png` (hechos de PNG; conviene usar los SVG oficiales).

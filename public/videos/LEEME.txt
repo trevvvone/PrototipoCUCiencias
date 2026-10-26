@@ -1,0 +1,6 @@
+Recursos ORIGINALES generados para el prototipo (sin derechos de terceros). Se pueden reemplazar con el mismo nombre de archivo.
+
+videos/  hero.mp4 y hero-dark.mp4 (portada, modo claro y oscuro) · laboratorio.mp4 y laboratorio-dark.mp4 (franja "Investigar es explorar")
+audio/   ep1.mp3, ep2.mp3, ep3.mp3 (tonos de ejemplo del podcast)
+img/     pub-1 a pub-8 (tarjetas), autor-1 a autor-7 (avatares de ejemplo), hero.jpg / hero-dark.jpg (póster), educosta.jpg, logos cuc-*.png
+Fuentes gratuitas si quieres material real: Pexels, Pixabay, Coverr, Mixkit. Revisa la licencia y guarda el enlace de origen.
